@@ -8,7 +8,58 @@
 <body>
     <h1>Assaignment-9</h1>
 
+    <div>
+        <h3>PART A: THEORY QUESTIONS </h3>
+        <p>1. Execution Context</p>
 
+        <p><u>What is Execution Context in JavaScript?</u></p>
+        <p>Everything inside javaScript happends inside an execution context. when the first time script run execution context made automatically. This has two phase , first is memory creation and second is code execution.</p>
+
+        <p><u>Explain Global Execution Context and Function Execution Context.</u></p>
+        <p>when first script load by default Global execution context create by browser. in global execution context all the variable and function main code always stored. It's stay at the bottom of the call stack.
+
+        <br> -- Function Execution Context -- <br>
+
+in FEC when something invoked a function the function execution context run the function and execute it. it's also has two phase. in memory creation  holds the function’s parameters, local variables. And in second phase the code execute line by line. If it's return something then it goes previous place where it was invoked.</p>
+
+        <p><u>What happens during the Creation Phase and Execution Phase?</u></p>
+        <p>Inside creation phase all the variable and function stored in a memory. at the start the default value of variable is (undefined). In Execution phase code run by line by line. It's a synchronus language.</p>
+
+        <p>2. Event Loop</p>
+        <p><u>What is the JavaScript Event Loop?</u></p>
+        <p>Event loop is a controller who sent work from callback queue to  call stack.</p>
+
+        <p><u>Why is JavaScript called Single Threaded?</u></p>
+        <p>JavaScript call single threaded because it executhe code line by line , one after another. In a synchronus way. </p>
+
+        <p><u>Explain the relationship between Call Stack, Web APIs, Callback Queue, and Event Loop.</u></p>
+        <p>Call Stack is a LIFO data structure that handles synchronous code execution. call stack where everything stack at the top of other . at the first goes global execution context.Web APIs  offload asynchronous tasks like timers and network requests to prevent blocking the main thread. when web API finish it's task then it sent to callback queue. when calllstack finish it's code then event loop took this method from callback queue and sent to callstack. In here Event loop makes the decision.</p>
+
+        <h4>3. setTimeout() and setInterval()</h4>
+        <p><u>What is setTimeout()?</u></p>
+        <p>It is a method . It used for delay the action so it happends later for code execution.</p>
+
+        <p><u>What is setInterval()?</u></p>
+        <p>This method used for repeating the action. such as timer,countdown etc.</p>
+
+        <p><u>What is the difference between setTimeout() and setInterval()?</u></p>
+        <p>setTimeout() execute it only one time after a specific time and setInterval() excute it repeatly for the specific time that was assign to setInterval() also it only stop using clearInterval()</p>
+
+        <p><u></u></p>
+        <p></p>
+
+        <p><u></u></p>
+        <p></p>
+
+        <p><u></u></p>
+        <p></p>
+
+
+
+- Write a program that prints "Hello World" after 3 seconds.
+
+
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
