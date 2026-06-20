@@ -80,4 +80,71 @@ async function checkingAge() {
 checkingAge();
 
 
+// PART B: DOM MANIPULATION PRACTICE
+// getElementById()
+const firstId = document.getElementById("firstId");
+console.log(firstId.textContent);
 
+// querySelector()
+const secondClass = document.querySelector(".secondClass")
+console.log(secondClass.innerText);
+
+// querySelectorAll()
+const box = document.querySelectorAll(".box");
+console.log(box);
+
+// 2. Change:
+// Text Content
+const thirdId = document.getElementById("thirdId")
+thirdId.textContent = "It has changed";
+console.log(thirdId.textContent);
+
+// HTML Content
+const fourthClass = document.querySelector(".fourthClass");
+fourthClass.innerHTML = '<p><u>New content added.</u></p>';
+
+// CSS Style
+thirdId.style.backgroundColor = "blue";
+thirdId.style.color = "#fff";
+fourthClass.style.paddingLeft = "120px";
+
+// 3. Create and append new elements dynamically.
+function createEle() {
+  const p = document.createElement("p");
+  p.textContent = "new Element";
+  console.log(p);
+  document.body.append(p);
+}
+
+createEle();
+
+// 4. Remove an element from the DOM.
+const parent = document.getElementById('parentElement');
+const child = document.getElementById('childElement');
+
+// parent.removeChild(child);
+
+// 5. Add event listeners:
+const clickMe = document.getElementById("clickMe");
+clickMe.addEventListener("click",()=>{
+  const para = document.createDocumentFragment("p");
+  para.textContent = "new p added by click";
+  document.body.append(para)
+});
+
+// input
+const inputElement = document.querySelector('input');
+
+inputElement.addEventListener('input', (event) => {
+  console.log('New value:', event.target.value);
+});   
+
+// submit
+    const form = document.getElementById('myForm');
+    const outputSpan = document.getElementById('output');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const inputValue = document.getElementById('userInput').value;
+      outputSpan.textContent = inputValue;
+      event.target.reset();
+    });
